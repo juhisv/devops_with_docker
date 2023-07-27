@@ -1,0 +1,7 @@
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.1-1.2$ docker ps -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                          PORTS     NAMES
+4780bc7023b3   021283c8eb95   "/docker-entrypoint.…"   16 minutes ago   Exited (0) About a minute ago             objective_yalow
+343d161d7c3e   021283c8eb95   "/docker-entrypoint.…"   16 minutes ago   Exited (0) About a minute ago             agitated_williams
+58ceb58bd965   021283c8eb95   "/docker-entrypoint.…"   18 minutes ago   Exited (0) About a minute ago             exciting_allen
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.1-1.2$ docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
