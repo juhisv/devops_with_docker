@@ -1,0 +1,4 @@
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.1-1.2$ docker run -it devopsdockeruh/pull_exercise
+Give me the password: basics
+You found the correct password. Secret message is:
+"This is the secret message"

@@ -1,0 +1,38 @@
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.x$ docker images
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE
+ubuntu                              latest    5a81c4b8502e   4 weeks ago   77.8MB
+ubuntu                              18.04     f9a80a55f492   8 weeks ago   63.2MB
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   2 years ago   83MB
+devopsdockeruh/simple-web-service   alpine    fd312adc88e0   2 years ago   15.7MB
+
+
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.x$ sudo docker ps -a
+CONTAINER ID   IMAGE                                      COMMAND                  CREATED          STATUS                      PORTS     NAMES
+d05dec77281c   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    14 seconds ago   Up 13 seconds                         alpine
+865ccb41abe7   devopsdockeruh/simple-web-service:alpine   "/usr/src/app/server"    3 minutes ago    Exited (2) 29 seconds ago             peaceful_darwin
+5772534d32aa   ubuntu                                     "sh -c 'apt-get upda…"   3 hours ago      Exited (130) 3 hours ago              t1_3
+a2eed21d1bbd   ubuntu                                     "--name t1_3 sh -c '…"   3 hours ago      Created                               gifted_pike
+bfa9a550f672   ubuntu                                     "sh -c 'whapt-get up…"   4 hours ago      Exited (130) 4 hours ago              focused_black
+98ed66d078bc   ubuntu                                     "sh -c 'whapt-get up…"   4 hours ago      Exited (2) 4 hours ago                quirky_volhard
+4b287f114aa0   ubuntu                                     "sh -c 'while true; …"   4 hours ago      Exited (130) 4 hours ago              sweet_nightingale
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/Exercises_1.x$ sudo docker exec -it alpine sh
+/usr/src/app # tail -f text.log 
+2023-07-27 12:22:59 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-07-27 12:23:01 +0000 UTC
+2023-07-27 12:23:03 +0000 UTC
+2023-07-27 12:23:05 +0000 UTC
+2023-07-27 12:23:07 +0000 UTC
+2023-07-27 12:23:09 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-07-27 12:23:11 +0000 UTC
+2023-07-27 12:23:13 +0000 UTC
+2023-07-27 12:23:15 +0000 UTC
+2023-07-27 12:23:17 +0000 UTC
+2023-07-27 12:23:19 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-07-27 12:23:21 +0000 UTC
+2023-07-27 12:23:23 +0000 UTC
+2023-07-27 12:23:25 +0000 UTC
+^C
+/usr/src/app # 
