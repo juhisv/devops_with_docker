@@ -1,0 +1,24 @@
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/temp$ touch text.log
+
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/temp$ docker run -v "$(pwd)/text.log:/usr/src/app/text.log" devopsdockeruh/simple-web-service
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+^C
+
+juha@juha-vm-ubuntu:~/Desktop/devops_with_docker/temp$ tail text.log 
+2023-07-28 10:10:00 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-07-28 10:10:02 +0000 UTC
+2023-07-28 10:10:04 +0000 UTC
+2023-07-28 10:10:06 +0000 UTC
+2023-07-28 10:10:08 +0000 UTC
+2023-07-28 10:10:10 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
+2023-07-28 10:10:12 +0000 UTC
+2023-07-28 10:10:14 +0000 UTC
