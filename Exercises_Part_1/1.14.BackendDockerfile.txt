@@ -1,0 +1,12 @@
+FROM golang:1.16
+
+WORKDIR /usr/local/example-backend
+
+ENV PATH=$PATH:/usr/local/go/bin 
+ENV PORT=8080
+ENV REQUEST_ORIGIN=http://localhost:5000
+COPY . .
+RUN go version 
+RUN go build 
+RUN go test ./...
+CMD ./server
